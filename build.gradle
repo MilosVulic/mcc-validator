@@ -1,17 +1,16 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'java'
 }
 
 java {
-    sourceCompatibility = "VERSION_16"
-    targetCompatibility = "VERSION_16"
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(16)
+    }
 }
 
-
 group = 'io.github.MilosVulic'
-version '1.0.14'
+version '1.0.15'
 
 repositories {
     mavenCentral()
