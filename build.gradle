@@ -1,7 +1,14 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'java'
 }
+
+compileJava {
+    sourceCompatibility = 16
+    targetCompatibility = 16
+}
+
 
 group = 'io.github.MilosVulic'
 version '1.0.5'
