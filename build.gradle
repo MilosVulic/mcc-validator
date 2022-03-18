@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    id 'maven-publish'
 }
 
 java {
@@ -10,7 +9,7 @@ java {
 }
 
 group = 'io.github.MilosVulic'
-version '1.0.16'
+version '1.0.17'
 
 repositories {
     mavenCentral()
