@@ -3,7 +3,7 @@ public class MccValidator {
     public static boolean isCodeValid(String code) {
         return MccFactory.getMccList()
              .stream()
-             .anyMatch(mcc -> mcc.getCode().equals(code));
+             .anyMatch(mcc -> mcc.code().equals(code));
     }
 
     public static boolean isCodeLengthValid(String code) {
@@ -22,8 +22,8 @@ public class MccValidator {
     public static String getDescription(String code) {
         return MccFactory.getMccList()
              .stream()
-             .filter(mcc -> mcc.getCode().equals(code))
-             .map(Mcc::getDescription)
+             .filter(mcc -> mcc.code().equals(code))
+             .map(Mcc::description)
              .findFirst().orElse("Description not found");
     }
 
